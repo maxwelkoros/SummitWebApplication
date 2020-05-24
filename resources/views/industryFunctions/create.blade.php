@@ -9,27 +9,18 @@
         <div class="kt-portlet__head">
             <div class="kt-portlet__head-label">
                 <h3 class="kt-portlet__head-title">
-                    Add a new Industry
+                    Add a new Industry Function
                 </h3>
             </div>
         </div>
 
 
-        <form class="kt-form" method="POST" action="{{ route('industry.store') }}"  enctype="multipart/form-data">
+        <form class="kt-form" method="POST" action="{{ route('industry_function.store') }}"  enctype="multipart/form-data">
             <div class="kt-portlet__body">
 
                 @csrf
 
-                <div class="form-group">
-                    <label for="job_category">Parent</label>
-                    <select id="parent" name="parent" class="form-control" required>
-                        <option disabled selected>Select Parent</option>
-                        <option>Accounting|Finance|Audit</option>
-
-
-                    </select>
-
-                </div>
+               
 
 
                 <div class="form-group">

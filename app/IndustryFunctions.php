@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class IndustryFunctions extends Model
 {
     //Set table for model
-  protected $table = 'industry';
+  protected $table = 'industryfunctions';
 
    /**
    * The attributes that are mass assignable.

@@ -83,10 +83,11 @@
                  <a class="collapse-item" href="{{route('location.index')}}">Locations</a>
                  <a class="collapse-item" href="{{route('language.index')}}">Language</a>
                  <a class="collapse-item" href="{{route('pq.index')}}">Professional Qualification</a>
-                 <a class="collapse-item" href="">Subject/Discipline Titles</a>
+                 <a class="collapse-item" href="{{route('sd.index')}}">Subject/Discipline Titles</a>
                  <a class="collapse-item" href="{{route('specialization.index')}}">Specialization Titles</a>
-                 <a class="collapse-item" href="">Hard Skills</a>
-                 <a class="collapse-item" href="">Industry Functions</a>
+                 <a class="collapse-item" href="{{route('hard_skills.index')}}">Hard Skills</a>
+                 <a class="collapse-item" href="{{route('industry_function.index')}}">Industry Functions</a>
+                 
              </div>
          </div>
      </li>

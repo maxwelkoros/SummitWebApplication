@@ -9,42 +9,27 @@
         <div class="kt-portlet__head">
             <div class="kt-portlet__head-label">
                 <h3 class="kt-portlet__head-title">
-                    Add a new Industry
+                    Add a new Subject title
                 </h3>
             </div>
         </div>
 
 
-        <form class="kt-form" method="POST" action="{{ route('industry.store') }}"  enctype="multipart/form-data">
+        <form class="kt-form" method="POST" action="{{ route('sd.store') }}"  enctype="multipart/form-data">
             <div class="kt-portlet__body">
 
                 @csrf
 
-                <div class="form-group">
-                    <label for="job_category">Parent</label>
-                    <select id="parent" name="parent" class="form-control" required>
-                        <option disabled selected>Select Parent</option>
-                        <option>Accounting|Finance|Audit</option>
-
-
-                    </select>
-
-                </div>
-
+             
 
                 <div class="form-group">
-                    <label for="job_title">Name</label>
+                    <label for="job_title">Title</label>
                     <input id="job_title" type="text" class="form-control" name="name"  required>
 
 
                 </div>
 
-                <div class="form-group">
-                    <label for="email">Details</label>
-                    <textarea name="description" row="50" cols="80" class="form-control"></textarea>
-
-
-                </div>
+               
 
 
                 <div>

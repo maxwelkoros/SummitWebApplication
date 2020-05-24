@@ -8,14 +8,14 @@
 @section('content')
 
     <div class="row user-add-button">
-        <a href="{{route('industry.create')}}" class="btn btn-primary btn-icon-split" style="margin-right: 15px;">
+        <a href="{{route('hard_skills.create')}}" class="btn btn-primary btn-icon-split" style="margin-right: 15px;">
             <span class="icon"><i class="fas fa-plus"></i></span>
-            <span class="text">New Industry</span> </a>
+            <span class="text">New Hard Skills</span> </a>
     </div>
 
     <div class="card mb-5">
         <div class="card-header tab-form-header">
-            My Industries
+            Hardskills
         </div>
         <div class="card-body">
             <table class="table" id="DataTable" width="100%">
@@ -45,34 +45,21 @@
                                    <i class="fas fa-eye"></i>
                                   </a>
                                   <a title="Edit details" class="btn btn-sm btn-clean btn-icon btn-icon-sm"
-                                     href="{{route('industry.edit',$industry->ID)}}">
+                                     href="{{route('hard_skills.edit',$industry->ID)}}">
                                     <i class="fas fa-edit"></i>
                                   </a>
-                                  <a title="Delete details" class="btn btn-sm btn-clean btn-icon btn-icon-sm"
-                                   href="#" onclick="
+                                  
 
-                                   var result =confirm('Confirm to delete');
-
-                                   if(result){
-
-                                       event.preventDefault();
-
-                                       document.getElementById('delete').submit();
-                                   }
-
-                                         " >
-                                    <i class="fas fa-trash"></i>
-
-                                  </a>
-
-                                <form style="display: none" id="delete"
-                                      action="{{route('industry.destroy',[$industry->ID])}}"
+                                <form  id="delete"
+                                      action="{{route('hard_skills.destroy',[$industry->ID])}}"
                                       method="post">
 
                                     @method('POST')
                                     {{csrf_field()}}
 
                                     <input type="hidden" name="_method" value="delete">
+                                    <button type="submit" class="btn btn-sm btn-clean btn-icon btn-icon-sm"> <i class="fas fa-trash"></i></button>
+
 
 
                                 </form>

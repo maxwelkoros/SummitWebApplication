@@ -48,24 +48,8 @@
                                      href="{{route('industry.edit',$industry->ID)}}">
                                     <i class="fas fa-edit"></i>
                                   </a>
-                                  <a title="Delete details" class="btn btn-sm btn-clean btn-icon btn-icon-sm"
-                                   href="#" onclick="
-
-                                   var result =confirm('Confirm to delete');
-
-                                   if(result){
-
-                                       event.preventDefault();
-
-                                       document.getElementById('delete').submit();
-                                   }
-
-                                         " >
-                                    <i class="fas fa-trash"></i>
-
-                                  </a>
-
-                                <form style="display: none" id="delete"
+                                  
+                                <form  id="delete"
                                       action="{{route('industry.destroy',[$industry->ID])}}"
                                       method="post">
 
@@ -73,6 +57,8 @@
                                     {{csrf_field()}}
 
                                     <input type="hidden" name="_method" value="delete">
+                                    <button type="submit" class="btn btn-sm btn-clean btn-icon btn-icon-sm"> <i class="fas fa-trash"></i></button>
+
 
 
                                 </form>

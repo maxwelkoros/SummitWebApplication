@@ -8,9 +8,9 @@
 @section('content')
 
     <div class="row user-add-button">
-        <a href="{{route('industry.create')}}" class="btn btn-primary btn-icon-split" style="margin-right: 15px;">
+        <a href="{{route('sd.create')}}" class="btn btn-primary btn-icon-split" style="margin-right: 15px;">
             <span class="icon"><i class="fas fa-plus"></i></span>
-            <span class="text">New Industry</span> </a>
+            <span class="text">New Subject title</span> </a>
     </div>
 
     <div class="card mb-5">
@@ -18,14 +18,13 @@
             My Industries
         </div>
         <div class="card-body">
-            <table class="table" id="DataTable" width="100%">
+            <table class="table table-striped"  width="100%">
                 <thead>
                 <tr>
                     <th>#</th>
-                    <th>Parent</th>
-                    <th>Name</th>
-                    <th>Details</th>
+                    <th>Title</th>
                     <th>Tool</th>
+                    
                 </tr>
                 </thead>
 
@@ -34,39 +33,19 @@
                 @foreach($industries as $industry)
 
                     <tr>
-                        <td>{{$industry->ID}}</td>
-                        <td>{{$industry->Name}}</td>
-                        <td>{{$industry->Parent}}</td>
-                        <td>{{$industry->Details}}</td>
+                        <td>{{$industry->id}}</td>
+                        <td>{{$industry->title}}</td>
                         <td>
                             <span style="overflow: visible; position: relative; width: 110px;">
-                                <a title="View details" class="btn btn-sm btn-clean btn-icon btn-icon-sm"
-                                   href="{{route('industry.show',$industry->ID)}}">
-                                   <i class="fas fa-eye"></i>
-                                  </a>
+                                
                                   <a title="Edit details" class="btn btn-sm btn-clean btn-icon btn-icon-sm"
-                                     href="{{route('industry.edit',$industry->ID)}}">
+                                     href="{{route('sd.edit',$industry->id)}}">
                                     <i class="fas fa-edit"></i>
                                   </a>
-                                  <a title="Delete details" class="btn btn-sm btn-clean btn-icon btn-icon-sm"
-                                   href="#" onclick="
+                                 
 
-                                   var result =confirm('Confirm to delete');
-
-                                   if(result){
-
-                                       event.preventDefault();
-
-                                       document.getElementById('delete').submit();
-                                   }
-
-                                         " >
-                                    <i class="fas fa-trash"></i>
-
-                                  </a>
-
-                                <form style="display: none" id="delete"
-                                      action="{{route('industry.destroy',[$industry->ID])}}"
+                                <form  id="delete"
+                                      action="{{route('sd.destroy',$industry->id)}}"
                                       method="post">
 
                                     @method('POST')
@@ -74,8 +53,16 @@
 
                                     <input type="hidden" name="_method" value="delete">
 
+                                    <button type="submit" class="btn btn-sm btn-clean btn-icon btn-icon-sm"> <i class="fas fa-trash"></i></button>
+
+
+                                    
+                                    
+
 
                                 </form>
+
+                                
                               </span>
                         </td>
 

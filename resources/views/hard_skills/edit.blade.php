@@ -8,24 +8,13 @@
 
 
 
-        <form class="kt-form" method="POST" action="{{ route('industry.update',$industry->ID) }}"  enctype="multipart/form-data">
+        <form class="kt-form" method="POST" action="{{ route('hard_skills.update',$industry->ID) }}"  enctype="multipart/form-data">
             <div class="kt-portlet__body">
                 @method('PUT')
 
                 @csrf
 
-                <div class="form-group">
-                    <label for="job_category">Parent</label>
-                    <select  id="parent" name="parent" class="form-control" required>
-                        <option disabled selected>Select Parent</option>
-                        <option>Accounting|Finance|Audit</option>
-                        <option selected="selected">
-                           {{$industry->Parent}}
-                        </option>
-                    </select>
-
-                </div>
-
+             
 
                 <div class="form-group">
                     <label for="job_title">Name</label>

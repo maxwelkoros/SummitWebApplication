@@ -102,6 +102,12 @@ Route::resource('location', 'LocationController');
 Route::resource('language', 'LanguageController');
 Route::resource('specialization', 'SpecializationController');
 Route::resource('pq', 'ProfessionalQController');
+Route::resource('industry_function', 'IndustryFunctionsController');
+Route::resource('hard_skills', 'HardSkillsController');
+Route::resource('sd', 'SubjectDisciplineController');
+
+
+
 
 
 
